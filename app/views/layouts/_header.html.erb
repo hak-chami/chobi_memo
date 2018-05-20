@@ -10,7 +10,7 @@
     <div class="navbar-nav">
       <% if user_signed_in? %>
         <div class="nav-item">
-          <%= link_to '/', class: 'nav-link' do %>
+          <%= link_to new_word_path, class: 'nav-link' do %>
             <%= fa_icon 'pencil 2x' %>
           <% end%>
         </div>
@@ -21,7 +21,7 @@
           </div>
           <!-- ドロップメニューの設定 -->
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-            <%= link_to 'マイページ', '#', class: 'nav-link dropdown-item' %>
+            <%= link_to 'マイページ', words_path, class: 'nav-link dropdown-item' %>
             <%= link_to 'アカウント設定', edit_user_registration_path, class: 'nav-link dropdown-item' %>
           <div class="dropdown-divider"></div>
             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link dropdown-item' %>
