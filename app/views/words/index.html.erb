@@ -14,15 +14,14 @@
     <!-- 登録語表示エリア -->
     <div class="container mt-5">
       <div class="row">
-        <div class="word_box col-md pl-3 m-2">
-          Ruby
-        </div>
-        <div class="word_box col-md pl-3 m-2">
-         Ruby on Rails
-        </div>
-        <div class="word_box col-md pl-3 m-2">
-          Strong Parameters
-        </div>
+        <!-- 登録内容繰り返し表示 -->
+        <% @user.words.each do |word| %>
+          <div class="p-2 col-md-4">
+            <div class="word_box">
+              <%= word.word %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
 
