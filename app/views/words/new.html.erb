@@ -1,0 +1,32 @@
+<% provide :title, '単語新規登録' %>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-10 coffset-md-1">
+
+    <h2>単語を新規登録する</h2>
+
+    <%= form_for(@words) do |f| %>
+
+      <div class="form-group">
+        <%= f.label :登録語 %><br />
+        <%= f.text_field :word, autofocus: true, class: 'form-control', placeholder: '登録語' %>
+      </div>
+    
+      <div class="form-group">
+        <%= f.label :よみがな %><br />
+        <%= f.text_field :kana, autofocus: true, class: 'form-control', placeholder: 'よみがな' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :メモ %><br />
+        <%= f.text_area :content, autofocus: true, class: 'form-control', placeholder: 'メモ', rows: 8 %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit '新規登録', class: 'btn btn-primary badge-pill pr-4 pl-4' %>
+      </div>
+
+    <% end %>
+
+  </div>
+</div>
