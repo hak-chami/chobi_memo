@@ -1,0 +1,30 @@
+<% provide :title, @word.word %>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-10 coffset-md-1">
+
+    <div class="container mt-5">
+      <!-- icon area -->
+      <div class="d-flex justify-content-end">
+        <%= link_to edit_word_path, class: 'mr-2' do %>
+          <%= fa_icon 'edit 2x' %>
+        <% end %>
+        <%= link_to word_path, method: :delete, data: {confirm: "本当に削除しますか？"} do %>
+          <%= fa_icon 'trash 2x' %>
+        <% end %>
+      </div>
+      <!-- word kana area -->
+      <div class="wordshow_title">
+        <span class="wordshow_word"><%= @word.word %></span>
+        <span class="wordshow_kana"><%= @word.kana %></span>
+      </div>
+      <!-- content area -->
+      <div class="wordshow_content">
+        <%= @word.content %>
+      </div>
+      <div class="mt-5">
+        <%= link_to 'back', :back %>
+      </div>
+    </div>
+  </div>
+</div>
