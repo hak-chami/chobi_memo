@@ -1,2 +1,33 @@
-<h1>Words#index</h1>
-<p>Find me in app/views/words/index.html.erb</p>
+<% provide :title, 'マイページ' %>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-10 coffset-md-1">
+
+    <!-- 検索フォーム -->
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="search..." aria-label="search" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <span class="input-group-text" id="basic-addon2"><%= fa_icon 'search' %></span>
+      </div>
+    </div>
+
+    <!-- 登録語表示エリア -->
+    <div class="container mt-5">
+      <div class="row">
+        <!-- 登録内容繰り返し表示 -->
+        <% @words.each do |word| %>
+          <div class="p-2 col-lg-4">
+            <div class="word_box">
+              <%= word.word %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- ページネーション -->
+    <div class="row justify-content-center mt-4">
+      <%= paginate @words %>
+    </div>
+  </div>
+</div>
