@@ -18,7 +18,9 @@
         <% @words.each do |word| %>
           <div class="p-2 col-lg-4">
             <div class="word_box">
-              <%= word.word %>
+              <%= link_to word_path(word) do %>
+                <%= word.word %>
+              <% end %>
             </div>
           </div>
         <% end %>
