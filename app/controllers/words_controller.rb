@@ -1,20 +1,16 @@
 class WordsController < ApplicationController
   before_action :set_word, only: [:show, :destroy]
 
-  def user
-    @user = current_user
-  end
-
   def index
-    @words = self.user.words.order(created_at: :desc).page(params[:page]).per(24)
+    @words = current_user.words.order(created_at: :desc).page(params[:page]).per(24)
   end
 
   def new
-    @words = self.user.words.new
+    @words = current_user.words.new
   end
 
   def create
-    @words = self.user.words.new(words_params)
+    @words = current_user.words.new(words_params)
     if @words.save
       redirect_to words_path, notice: '単語を登録しました！'
     else
@@ -37,6 +33,6 @@ class WordsController < ApplicationController
   end
 
   def set_word
-    @word = self.user.words.find_by(id: params[:id])
+    @word = current_user.words.find_by(id: params[:id])
   end
 end
