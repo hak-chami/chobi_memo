@@ -1,0 +1,9 @@
+<% if @word.errors.any? %>
+  <div class="alert alert-danger text-left m-4">
+    <ul>
+      <% @word.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

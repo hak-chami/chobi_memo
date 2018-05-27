@@ -33,7 +33,7 @@ class WordsController < ApplicationController
     if @word.update(words_params)
       redirect_to word_path, notice: '単語を編集しました！'
     else
-      render 'show'
+      render 'edit'
     end
   end
 
