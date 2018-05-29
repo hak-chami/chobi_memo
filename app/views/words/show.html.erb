@@ -20,7 +20,7 @@
       </div>
       <!-- content area -->
       <div class="wordshow_content">
-        <%= @word.content %>
+        <%= simple_format(@word.content) %>
       </div>
       <div class="mt-5">
         <%= link_to 'back', :back %>
