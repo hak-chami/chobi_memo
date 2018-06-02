@@ -3,4 +3,5 @@ class Word < ApplicationRecord
   validates :word, presence: true
   validates :kana, presence: true
   validates :content, presence: true
+  validates :content_replace, presence: true
 end
