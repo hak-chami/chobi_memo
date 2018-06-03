@@ -12,7 +12,7 @@ class WordsController < ApplicationController
 
   def create
     @word = current_user.words.new(words_params)
-    @word.content_replace = text_conversion(words_params[:content])
+    @word.content_replace = Word.text_conversion(words_params[:content])
     if @word.save
       redirect_to words_path, notice: '単語を登録しました！'
     else
@@ -41,14 +41,6 @@ class WordsController < ApplicationController
 
   private
 
-  def text_conversion(content_text)
-    content_text.gsub(/\[.+\]\(http.+\)/) do |text|
-      url_title = text.slice(/\[.+\]/).delete('[').delete(']')
-      url_address = text.slice(/\(http.+\)/).delete('(').delete(')')
-      "<a href=\"#{url_address}\" target=\"_blank\">#{url_title}</a>"
-    end
-  end
-
   def words_params
       params.require(:word).permit(:word, :kana, :content)
   end
@@ -56,4 +48,5 @@ class WordsController < ApplicationController
   def set_word
     @word = current_user.words.find_by(id: params[:id])
   end
+  
 end
