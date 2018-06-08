@@ -12,6 +12,7 @@ class WordsController < ApplicationController
 
   def create
     @word = current_user.words.new(words_params)
+    @word.content_replace = Word.text_conversion(words_params[:content])
     if @word.save
       redirect_to words_path, notice: '単語を登録しました！'
     else
@@ -47,4 +48,5 @@ class WordsController < ApplicationController
   def set_word
     @word = current_user.words.find_by(id: params[:id])
   end
+  
 end
