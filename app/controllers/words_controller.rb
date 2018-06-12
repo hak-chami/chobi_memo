@@ -32,6 +32,7 @@ class WordsController < ApplicationController
   end
 
   def update
+    @word.content_replace = Word.text_conversion(words_params[:content])
     if @word.update(words_params)
       redirect_to word_path, notice: '単語を編集しました！'
     else
