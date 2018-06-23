@@ -40,6 +40,10 @@ class WordsController < ApplicationController
     end
   end
 
+  def search
+    @words = current_user.words.where('word LIKE ?', "#{params[:search]}")
+  end
+
   private
 
   def words_params
