@@ -41,7 +41,7 @@ class WordsController < ApplicationController
   end
 
   def search
-    @words = current_user.words.where('word LIKE ?', "#{params[:search]}")
+    @words = current_user.words.where('word LIKE(?)', "%#{params[:keyword]}%")
   end
 
   private
