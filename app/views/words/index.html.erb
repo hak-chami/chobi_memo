@@ -12,19 +12,8 @@
     </div>
 
     <!-- 登録語表示エリア -->
-    <div class="container mt-5">
-      <div class="row">
-        <!-- 登録内容繰り返し表示 -->
-        <% @words.each do |word| %>
-          <div class="p-2 col-lg-4">
-            <div class="word_box">
-              <%= link_to word_path(word) do %>
-                <%= word.word %>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
-      </div>
+    <div id='words_index'>
+      <%= render 'words_index' %>
     </div>
 
     <!-- ページネーション -->
