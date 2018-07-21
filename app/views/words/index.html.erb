@@ -13,7 +13,7 @@
 
     <!-- 登録語表示エリア -->
     <div id="words_index">
-      <%= render 'words_index' %>
+      <%= render partial: 'words_index', locals: { words: @words } %>
     </div>
 
     <!-- ページネーション -->

@@ -1,1 +1,1 @@
-$("#words_index").html("<%= render j('words_index') %>");
+$('#words_index').html("<%= j(render partial: 'words_index', locals: { words: @words }) %>");
