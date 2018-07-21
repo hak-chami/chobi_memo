@@ -31,6 +31,10 @@ a:active {
   background-color: #F9D423;
 }
 
+.dropdown-menu > a:focus,{
+  background-color: #FF4E50;
+}
+
 /*登録語一覧BOX*/
 
 .word_box {
@@ -74,13 +78,13 @@ a:active {
 .page-item > a:hover,
 .page-item > span:focus,
 .page-item > span:hover {
-      color: #666;
+      color: #FF4E50;
       background-color: #f6f6f6;
 }
 
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
-    background-color: #F9D423;
-    border-color: #F9D423;
+    background-color: #FF4E50;
+    border-color: #FF4E50;
 }
