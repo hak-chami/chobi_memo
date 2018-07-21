@@ -61,3 +61,26 @@ a:active {
   text-align: left;
   padding: 1em 0.5em;
 }
+
+/*kaminari*/
+
+.page-item > a,
+.page-item > span {
+      color: #666;
+      background-color: #fff;
+}
+
+.page-item > a:focus,
+.page-item > a:hover,
+.page-item > span:focus,
+.page-item > span:hover {
+      color: #666;
+      background-color: #f6f6f6;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #F9D423;
+    border-color: #F9D423;
+}
