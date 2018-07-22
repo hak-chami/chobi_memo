@@ -1,9 +1,23 @@
 <% provide :title, 'home' %>
 
-<div class="container-fluid">
+<div class="container-fluid top-body">
 	<div class="p-5 text-center">
-		<h1>Chobi Memo</h1>
-		<p>調べたことを“ちょびっと”記録</p>
-		<%= link_to '新規登録', new_user_registration_path,class: 'btn btn-outline-warning badge-pill pr-4 pl-4' %>
+    <h1><%= image_tag '/logo.png', :width => '400', :alt => 'ChobiMemoロゴ'%></h1>
+		<h4 class ="p-2">調べたことを“ちょびっと”記録</h4>
+    <div class="pt-5 pb-5">
+      <p>勉強中、ちょっと調べた新しい言葉や、</p>
+      <p>今度作ってみようと思ったレシピ。</p>
+      <p>調べたことをちょびっとメモできるお手軽メモアプリ。</p>
+    </div>
+    <%= link_to 'はじめてみる', new_user_registration_path,class: 'btn btn-outline-light badge-pill pr-4 pl-4' %>
 	</div>
+</div>
+<div class="container-fluid">
+  <div class="p-5 text-center">
+    <h2>つかいかた</h2>
+    <p>メモしておきたい言葉と内容を登録するだけで、かんたん記録。</p>
+    <p>URLの登録もOK！</p>
+    <div class="pt-5 pb-5">
+    </div>
+  </div>
 </div>

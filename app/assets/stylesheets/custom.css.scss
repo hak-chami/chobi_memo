@@ -1,9 +1,12 @@
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css);
 
 /*全体のレイアウト*/
 
 body {
   color: #333;
+  font-family: "Rounded Mplus 1c";
+  font-weight: 300;
 }
 
 /*リンク*/
@@ -33,6 +36,12 @@ a:active {
 
 .dropdown-menu > a:focus,{
   background-color: #FF4E50;
+}
+
+/*ランディングページ*/
+
+.top-body {
+  background-color: #F9D423;
 }
 
 /*登録語一覧BOX*/
