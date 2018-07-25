@@ -10,15 +10,31 @@
       <p>調べたことをちょびっとメモできるお手軽メモアプリ。</p>
       <%= image_tag '/lp-bg-small.png', :width => '100%', :class => 'img-fluid small-display', :alt => 'ちょことびすけ'%>
     </div>
-    <%= link_to 'はじめてみる', new_user_registration_path,class: 'btn btn-outline-light badge-pill pr-4 pl-4' %>
+    <%= link_to 'はじめてみる', new_user_registration_path, class: 'btn btn-outline-light badge-pill pr-4 pl-4' %>
 	</div>
 </div>
 <div class="container-fluid">
   <div class="p-5 text-center">
     <h2>つかいかた</h2>
-    <p>メモしておきたい言葉と内容を登録するだけで、かんたん記録。</p>
-    <p>URLの登録もOK！</p>
-    <div class="pt-5 pb-5">
+    <p>メモしておきたい言葉と内容を登録するだけで、かんたん記録。<br>URLの登録もOK！</p>
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-md lp-howtouse p-4">
+          <%= image_tag '/lp-howtouse-1.png', :width => '300', :class => 'img-fluid howtouse-img mb-4', :alt => '言葉の登録'%>
+          <div class="howtouse-title p-2">まずは言葉を登録しよう</div>
+          <div class="p-3">新規登録ページから「言葉」と「読み」「メモ」を登録。URLもタイトルをつけて登録OK！</div>
+        </div>
+        <div class="col-md lp-howtouse p-4">
+          <%= image_tag '/lp-howtouse-2.png', :width => '300', :class => 'img-fluid howtouse-img mb-4', :alt => '登録語の一覧表示'%>
+          <div class="howtouse-title p-2">登録した言葉は一覧で表示</div>
+          <div class="p-3">登録した言葉が一覧で表示されるよ。検索BOXから探すこともできるからたくさん登録しても大丈夫！</div>
+        </div>
+        <div class="col-md lp-howtouse p-4">
+          <%= image_tag '/lp-howtouse-3.png', :width => '300', :class => 'img-fluid howtouse-img mb-4', :alt => '詳細ページ'%>
+          <div class="howtouse-title p-2">詳細ページでメモを確認</div>
+          <div class="p-3">詳細ページでは登録したメモを確認できるよ。編集や削除もOK！</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
