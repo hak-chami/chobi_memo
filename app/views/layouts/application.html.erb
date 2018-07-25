@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <!-- ヘッダー表示 -->
     <%= render 'layouts/header' %>
     <!-- フラッシュメッセージ表示 -->
     <div class="container-fluid p-0">
@@ -22,10 +23,13 @@
         </div>
       <% end %>
     </div>
+    <!-- コンテンツ表示 -->
     <div class="container-fluid m-0 p-0">
       <div class="text-center">
         <%= yield %>
       </div>
     </div>
+    <!-- フッター表示 -->
+    <%= render 'layouts/footer' %>
   </body>
 </html>
