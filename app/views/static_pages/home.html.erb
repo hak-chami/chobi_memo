@@ -2,12 +2,13 @@
 
 <div class="container-fluid top-body">
 	<div class="p-5 text-center">
-    <h1><%= image_tag '/logo.png', :width => '400', :alt => 'ChobiMemoロゴ'%></h1>
+    <h1><%= image_tag '/logo.png', :width => '400', :class => 'img-fluid', :alt => 'ChobiMemoロゴ'%></h1>
 		<h4 class ="p-2">調べたことを“ちょびっと”記録</h4>
     <div class="pt-5 pb-5">
       <p>勉強中、ちょっと調べた新しい言葉や、</p>
       <p>今度作ってみようと思ったレシピ。</p>
       <p>調べたことをちょびっとメモできるお手軽メモアプリ。</p>
+      <%= image_tag '/lp-bg-small.png', :width => '100%', :class => 'img-fluid small-display', :alt => 'ちょことびすけ'%>
     </div>
     <%= link_to 'はじめてみる', new_user_registration_path,class: 'btn btn-outline-light badge-pill pr-4 pl-4' %>
 	</div>
