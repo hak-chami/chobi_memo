@@ -1,9 +1,13 @@
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css);
+
 
 /*全体のレイアウト*/
 
 body {
   color: #333;
+  font-family: "Rounded Mplus 1c";
+  font-weight: 300;
 }
 
 /*リンク*/
@@ -33,6 +37,47 @@ a:active {
 
 .dropdown-menu > a:focus,{
   background-color: #FF4E50;
+}
+
+/*ランディングページ*/
+
+.top-body {
+  background-color: #F9D423;
+}
+
+@include media-breakpoint-up(md) {
+  .top-body {
+    background-image: url("/lp-bg.png");
+    background-size: contain;
+    background-position : 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.small-display {
+  display: none;
+}
+
+@include media-breakpoint-down(md) {
+  .small-display {
+    display: block;
+  }
+}
+
+.howtouse-img {
+  border: solid 1px #f6f6f6;
+}
+
+.howtouse-title {
+  color: #FF4E50;
+  font-size: 120%;
+  border-bottom: dotted 1px #FF4E50;
+}
+
+/*フッター*/
+
+.footer {
+  border-top: dotted 2px #F9D423;
 }
 
 /*登録語一覧BOX*/

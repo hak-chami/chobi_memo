@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-custom">
   <!-- アプリロゴ -->
-  <%= link_to 'Chobi Memo', '/', id: 'logo', class: 'navbar-brand' %>
+  <%= link_to '/', id: 'logo', class: 'navbar-brand' do %>
+    <%= image_tag '/logo.png', :height => '25', :alt => 'ChobiMemoロゴ'%>
+  <% end %>
   <!-- レスポンシブメニューボタン：md -->
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
     <span class="navbar-toggler-icon"></span>
