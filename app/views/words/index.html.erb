@@ -4,11 +4,11 @@
   <div class="col-md-10 coffset-md-1">
 
     <!-- 検索フォーム -->
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="search..." aria-label="search" aria-describedby="basic-addon2">
-      <div class="input-group-append">
-        <span class="input-group-text" id="basic-addon2"><%= fa_icon 'search' %></span>
-      </div>
+    <div class="mb-3">
+      <%= form_tag words_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search], :placeholder => "search..." %>
+        <%= submit_tag "Search", :name => nil %>
+      <% end %>
     </div>
 
     <!-- 登録語表示エリア -->
