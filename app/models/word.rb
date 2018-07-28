@@ -12,5 +12,13 @@ class Word < ApplicationRecord
       "<a href=\"#{url_address}\" target=\"_blank\">#{url_title}</a>"
     end
   end
+
+  def self.search(current_user, search_word)
+    if search_word
+      current_user.words.where('word LIKE(?)', "%#{search_word}%")
+    else
+      current_user.words
+    end
+  end
   
 end

@@ -3,7 +3,7 @@ class WordsController < ApplicationController
   before_action :set_word, only: [:show, :destroy, :edit, :update]
 
   def index
-    @words = search(params[:search])
+    @words = Word.search(current_user, params[:search]).order(created_at: :desc).page(params[:page]).per(24)
   end
 
   def new
@@ -37,14 +37,6 @@ class WordsController < ApplicationController
       redirect_to word_path, notice: '単語を編集しました！'
     else
       render 'edit'
-    end
-  end
-
-  def search(search)
-    if search
-      current_user.words.where('word LIKE(?)', "%#{params[:search]}%").order(created_at: :desc).page(params[:page]).per(24)
-    else
-      current_user.words.order(created_at: :desc).page(params[:page]).per(24)
     end
   end
 
