@@ -3,7 +3,7 @@ class WordsController < ApplicationController
   before_action :set_word, only: [:show, :destroy, :edit, :update]
 
   def index
-    @words = current_user.words.order(created_at: :desc).page(params[:page]).per(24)
+    @words = Word.search(current_user, params[:search]).order(created_at: :desc).page(params[:page]).per(24)
   end
 
   def new
