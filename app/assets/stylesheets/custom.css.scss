@@ -45,7 +45,7 @@ a:active {
   background-color: #F9D423;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(xl) {
   .top-body {
     background-image: url("/lp-bg.png");
     background-size: contain;
@@ -58,7 +58,7 @@ a:active {
   display: none;
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .small-display {
     display: block;
   }
